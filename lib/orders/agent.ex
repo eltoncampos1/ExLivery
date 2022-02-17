@@ -18,6 +18,8 @@ defmodule Exlivery.Orders.Agent do
 
   defp update_state(state, %Order{} = order, uuid), do: Map.put(state, uuid, order)
 
+  def list_all, do: Agent.get(__MODULE__, & &1)
+
   defp get_order(state, uuid) do
     case Map.get(state, uuid) do
       nil -> {:error, "Order not found."}
