@@ -5,13 +5,14 @@ defmodule Exlivery.Users.UserTest do
 
   describe "build/5" do
     test "When all params are valid, returns an user" do
-      response = User.build(
-        "user_name",
-        "email@valid.com",
-        "12345678900",
-        20,
-        "rua valida, 0"
-      )
+      response =
+        User.build(
+          "user_name",
+          "email@valid.com",
+          "12345678900",
+          20,
+          "rua valida, 0"
+        )
 
       expected_response = {:ok, build(:user)}
 
@@ -19,13 +20,14 @@ defmodule Exlivery.Users.UserTest do
     end
 
     test "When age is minor than 18, returns an error" do
-      response = User.build(
-        "user_name",
-        "email@valid.com",
-        "123456789",
-        17,
-        "rua valida"
-      )
+      response =
+        User.build(
+          "user_name",
+          "email@valid.com",
+          "123456789",
+          17,
+          "rua valida"
+        )
 
       expected_response = {:error, "Invalid parameters"}
 

@@ -8,5 +8,5 @@ defmodule Exlivery.Users.User do
     {:ok, %__MODULE__{name: name, email: email, cpf: cpf, age: age, address: address}}
   end
 
-  def build(_name, _email, _cpf, _age,_address), do: {:error, "Invalid parameters"}
+  def build(_name, _email, _cpf, _age, _address), do: {:error, "Invalid parameters"}
 end
