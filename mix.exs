@@ -8,7 +8,7 @@ defmodule Exlivery.MixProject do
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      elixirc_paths: elixirc_paths(Mix.env)
+      elixirc_paths: elixirc_paths(Mix.env())
     ]
   end
 
@@ -25,7 +25,7 @@ defmodule Exlivery.MixProject do
     [
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:decimal, "~> 2.0"},
-      {:ex_machina, "~> 2.7.0"},
+      {:ex_machina, "~> 2.7.0"}
     ]
   end
 
